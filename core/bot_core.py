@@ -38,7 +38,7 @@ class UniversalBot:
         self.bot.send_message(message.chat.id, "🛠 Команды бота:\n/start — вернуться в меню\n/stats — сколько мемов ты получил\n/about — о боте\n\nИспользуй кнопки для выбора!")
 
     def about_command(self, message):
-        self.bot.send_message(message.chat.id, "👾 Этот бот создан по приколу🐲\nGitHub: https://github.com/ex1st-dev\nTelegram: @E25X55I75\n\nУНИВЕРСАЛЬНЫЙ БОТ ХУЙНИ — место, где правит хаос и мемы! 💣")
+        self.bot.send_message(message.chat.id, "👾 Этот бот создан по приколу🐲\nGitHub: https://github.com/Exichek\nTelegram: @E25X55I75\n\nУНИВЕРСАЛЬНЫЙ БОТ ХУЙНИ — место, где правит хаос и мемы! 💣")
 
     def stats_command(self, message):
         count = self.user_stats.get(message.chat.id, 0)
@@ -128,7 +128,7 @@ class UniversalBot:
         elif state == 'waiting_for_min':
             try:
                 self.user_states[chat_id] = {'min': int(message.text)}
-                self.bot.send_message(chat_id, "✍️ Теперь введи максимальное число:")
+                self.bot.send_message(chat_id, "🎲 Теперь введи максимальное число:")
             except ValueError:
                 self.bot.send_message(chat_id, "🚫 Нужно ввести целое число! Попробуй ещё раз:")
         elif isinstance(state, dict) and 'min' in state:
